@@ -9,7 +9,7 @@ function Layout() {
         </a>
 
         <nav className="header__nav">
-          <button className="header__nav-btn" aria-label="Toggle navigation">
+          <button className="header__nav-btn">
             <span></span>
             <span></span>
             <span></span>
@@ -37,11 +37,11 @@ function Layout() {
       <main id="home" className="main">
         <div className="main__block container">
           <div className="main__text-block loaded">
-            <h1 className="main__title">FE Software Engineer</h1>
+            <h1 className="main__title">Software Engineer</h1>
             <p className="main__text">
-              Hi, I’m Ayyan, a passionate <span className="highlight">web developer</span> from Pakistan. I specialize
-              in creating modern, responsive, and user-friendly websites. Every project I work on reflects my commitment
-              to quality and attention to detail.
+              Hi, I’m Ayyan, a passionate <span className="highlight">Frontend Software Engineer</span>. I specialize in
+              creating modern, responsive, and user-friendly websites. Every project I work on reflects my commitment to
+              quality and attention to detail.
             </p>
             <a href="#portfolio" className="button main__button">
               View My Works

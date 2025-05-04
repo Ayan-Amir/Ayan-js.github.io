@@ -1,0 +1,12 @@
+@use '../../styles/_variables' as var;
+@use '../../styles/_mixins' as mixin;
+
+.layoutScreen {
+  @include mixin.flex();
+  height: var.$screen-height;
+  overflow: hidden;
+  .mainScreen {
+    flex: 1;
+    overflow-y: auto;
+  }
+}

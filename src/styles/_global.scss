@@ -1,0 +1,90 @@
+@use './_variables' as *;
+@use './_mixins' as *;
+@use './_button';
+@use './_table';
+@use './pages/_index.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  overflow-x: hidden;
+  font-family: $font-family-primary;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: $spacing-8;
+  height: $spacing-8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-white;
+  border-radius: $border-radius-4;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $color-white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.white-space-pre {
+  white-space: pre;
+}
+
+input.form-control {
+  font-size: $font-size-16;
+  color: $color-gray-500;
+  background: $color-white;
+  padding: $spacing-10 $spacing-14;
+  outline: none;
+  border: 1px solid $color-gray-300;
+  border-radius: $border-radius-8;
+  box-shadow: $box-shadow-xs;
+  width: $full;
+  &.active {
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}

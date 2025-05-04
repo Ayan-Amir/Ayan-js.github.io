@@ -1,0 +1,225 @@
+@use './_fonts.scss';
+
+// Colors
+$color-primary: #ba29e6;
+$color-secondary: #5532fa;
+$color-primary-25: #e8f1ef;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-white-09: #ffffff09;
+$color-white-40: rgba(255, 255, 255, 0.4);
+$color-white-50: rgba(255, 255, 255, 0.5);
+$color-white-border: #f3e7f6;
+$color-success: #5fc490;
+$color-success-50: #ecfdf3;
+$color-success-500: #12b76a;
+$color-success-600: #5fc490;
+$color-success-700: #027a48;
+$color-error: #d92d20;
+$color-error-25: #fffbfa;
+$color-error-50: #fef3f2;
+$color-error-300: #fda29b;
+$color-error-500: #f04438;
+$color-error-600: #d92d20;
+$color-error-700: #b42318;
+$color-blue: #3776f4;
+$color-tertiary: #840ea7;
+$color-glass-btn-05: rgba(132, 14, 167, 0.05);
+$color-glass-btn-06: rgba(132, 14, 167, 0.06);
+$color-glass-btn-10: rgba(132, 14, 167, 0.1);
+$color-divider: #475467;
+$color-gray-10: rgba(95, 68, 246, 0.1);
+$color-gray-20: rgba(255, 255, 255, 0.2);
+$color-gray-25: #fcfcfd;
+$color-gray-50: #f9fafb;
+$color-gray-100: #f2f4f7;
+$color-gray-200: #e4e7ec;
+$color-gray-300: #d0d5dd;
+$color-gray-400: #98a2b3;
+$color-gray-500: #667085;
+$color-gray-600: #475467;
+$color-gray-700: #344054;
+$color-gray-800: #1d2939;
+$color-gray-900: #101828;
+$color-primary-25: #e8f1ef;
+$color-yellow: #d1a300;
+$color-yellow-50: #fdfbdb;
+
+// Font Families
+$font-family-primary: 'Inter Tight', sans-serif;
+
+// Font Sizes (converted to rem)
+$font-size-10: 0.625rem; // 10px
+$font-size-12: 0.75rem; // 12px
+$font-size-14: 0.875rem; // 14px
+$font-size-16: 1rem; // 16px
+$font-size-18: 1.125rem; // 18px
+$font-size-20: 1.25rem; // 20px
+$font-size-24: 1.5rem; // 24px
+$font-size-30: 1.875rem; // 30px
+$font-size-32: 2rem; // 32px
+$font-size-36: 2.25rem; // 36px
+$font-size-40: 2.5rem; // 40px
+
+// Font Weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Border Radius
+$border-radius-2: 0.125rem; //2px
+$border-radius-4: 0.25rem; //4px
+$border-radius-6: 0.375rem; //6px
+$border-radius-8: 0.5rem; //8px
+$border-radius-12: 0.75rem; //12px
+$border-radius-16: 1rem; //16px
+$border-radius-20: 1.25rem; //20px
+$border-radius-24: 1.5rem; //24px
+$border-radius-28: 1.75rem; //28px
+$border-radius-32: 2rem; //32px
+$border-radius-38: 2.375rem; //38px
+
+$border-radius-half: 50%; //50% rounded
+
+// Spacing (converted to rem)
+$spacing-2: 0.125rem; // 2px
+$spacing-4: 0.25rem; // 4px
+$spacing-6: 0.375rem; // 6px
+$spacing-8: 0.5rem; // 8px
+$spacing-10: 0.625rem; // 10px
+$spacing-12: 0.75rem; // 12px
+$spacing-14: 0.875rem; // 14px
+$spacing-16: 1rem; // 16px
+$spacing-18: 1.125rem; // 18px
+$spacing-20: 1.25rem; // 20px
+$spacing-22: 1.375rem; // 22px
+$spacing-24: 1.5rem; // 24px
+$spacing-28: 1.75rem; // 28px
+$spacing-30: 1.875rem; // 30px
+$spacing-32: 2rem; // 32px
+$spacing-34: 2.125rem; // 34px
+$spacing-36: 2.25rem; // 36px
+$spacing-40: 2.5rem; // 40px
+$spacing-42: 2.625rem; // 42px
+$spacing-44: 2.75rem; // 44px
+$spacing-46: 2.875rem; // 46px
+$spacing-48: 3rem; // 48px
+$spacing-50: 3.125rem; // 50px
+$spacing-52: 3.25rem; // 52px
+$spacing-54: 3.375rem; // 54px
+$spacing-56: 3.5rem; // 56px
+$spacing-58: 3.625rem; // 58px
+$spacing-60: 3.75rem; // 60px
+$spacing-64: 4rem; // 64px
+$spacing-66: 4.125rem; // 66px
+$spacing-68: 4.25rem; // 68px
+$spacing-70: 4.375rem; // 70px
+$spacing-72: 4.5rem; // 72px
+$spacing-76: 4.75rem; // 76px
+$spacing-80: 5rem; // 80px
+$spacing-86: 5.375rem; // 86px
+$spacing-88: 5.5rem; // 88px
+$spacing-90: 5.625rem; // 90px
+$spacing-96: 6rem; // 96px
+$spacing-100: 6.25rem; // 100px
+$spacing-102: 6.375rem; // 102px
+$spacing-104: 6.5rem; // 104px
+$spacing-110: 6.875rem; // 110
+$spacing-116: 7.25rem; // 116
+$spacing-118: 7.375rem; // 118
+$spacing-120: 7.5rem; // 120
+$spacing-124: 7.75rem; // 124
+$spacing-128: 8rem; // 128
+$spacing-132: 8.25rem; // 132px
+$spacing-136: 8.5rem; // 136px
+$spacing-140: 8.75rem; // 140px
+$spacing-146: 9.125rem; // 146px
+$spacing-150: 9.375rem; // 150px
+$spacing-152: 9.5rem; // 152px
+$spacing-160: 10rem; // 160px
+$spacing-166: 10.375rem; // 166px
+$spacing-168: 10.5rem; // 168px
+$spacing-170: 10.625rem; // 170px
+$spacing-180: 11.25rem; // 180px
+$spacing-190: 11.875rem; // 190px
+$spacing-192: 12rem; // 192px
+$spacing-194: 12.125rem; // 194px
+$spacing-200: 12.5rem; // 200px
+$spacing-208: 13rem; // 208px
+$spacing-220: 13.75rem; // 220px
+$spacing-226: 14.125rem; // 226px
+$spacing-238: 14.875rem; // 238px
+$spacing-240: 15rem; // 240px
+$spacing-254: 15.875rem; // 254px
+$spacing-256: 16rem; // 256px
+$spacing-272: 17rem; // 272px
+$spacing-280: 17.5rem; // 280px
+$spacing-288: 18rem; // 288px
+$spacing-300: 18.75rem; // 300px
+$spacing-316: 19.75rem; // 316px
+$spacing-320: 20rem; // 320px
+$spacing-336: 21rem; // 336px
+$spacing-342: 21.375rem; // 342px
+$spacing-346: 21.625rem; // 346px
+$spacing-352: 22rem; // 352px
+$spacing-360: 22.5rem; // 360px
+$spacing-376: 23.5rem; // 376px
+$spacing-384: 24rem; // 384px
+$spacing-390: 24.375rem; // 390px
+$spacing-394: 24.625rem; // 394px
+$spacing-400: 25rem; // 400px
+$spacing-416: 26rem; // 416px
+$spacing-440: 27.5rem; // 440px
+$spacing-460: 28.75rem; // 460px
+$spacing-470: 29.375rem; // 470px
+$spacing-488: 30.5rem; // 488px
+$spacing-494: 30.875rem; // 494px
+$spacing-520: 32.5rem; // 520px
+$spacing-528: 33rem; // 528px
+$spacing-538: 33.625rem; // 538px
+$spacing-560: 35rem; // 560px
+$spacing-720: 45rem; // 720px
+$half: 50%;
+$full: 100%;
+$quat: 25%;
+$negative-half: -50%;
+$negative-full: -100%;
+$screen-width: 100vw;
+$screen-height: 100vh;
+
+// Opacity Levels
+$opacity-0: 0; // 0% (fully transparent)
+$opacity-10: 0.1; // 10%
+$opacity-20: 0.2; // 20%
+$opacity-25: 0.25; // 25%
+$opacity-30: 0.3; // 30%
+$opacity-40: 0.4; // 40%
+$opacity-50: 0.5; // 50% (semi-transparent)
+$opacity-60: 0.6; // 60%
+$opacity-70: 0.7; // 70%
+$opacity-80: 0.8; // 80%
+$opacity-90: 0.9; // 90%
+$opacity-100: 1; // 100% (fully opaque)
+
+// Box Shadow
+$box-shadow-xl:
+  0px 20px 24px -4px rgba(16, 24, 40, 0.1),
+  0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+
+$box-shadow-lg:
+  0px 12px 16px -4px rgba(16, 24, 40, 0.1),
+  0px 4px 6px -2px rgba(16, 24, 40, 0.05);
+
+$box-shadow-sm:
+  0px 1px 3px 0px rgba(16, 24, 40, 0.1),
+  0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+
+$box-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+$box-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.2);
+
+$drop-box-shadow-20: 0px 32px 64px rgba(16, 24, 40, 0.2);

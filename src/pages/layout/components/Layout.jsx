@@ -40,12 +40,11 @@ function Layout() {
             <h1 className="main__title">Software Engineer</h1>
             <p className="main__text">
               Hi, I’m Ayyan, a passionate <span className="highlight">Frontend Software Engineer</span>. I specialize in
-              creating modern, responsive, and user-friendly websites. Every project I work on reflects my commitment to
-              quality and attention to detail.
+              creating modern, responsive, and user-friendly websites.
             </p>
-            <a href="#portfolio" className="button main__button">
+            {/* <a href="#portfolio" className="button main__button">
               View My Works
-            </a>
+            </a> */}
           </div>
 
           <div className="main__photo-block">

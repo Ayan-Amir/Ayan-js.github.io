@@ -6,7 +6,7 @@
   "homepage": "/",
   "scripts": {
     "dev": "vite",
-    "build": "yarn generate-meta-tag && vite build",
+    "build": "yarn && vite build",
     "serve": "serve dist",
     "lint": "eslint 'src/**/*.{js,jsx}' --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

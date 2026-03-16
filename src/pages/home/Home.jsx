@@ -9,6 +9,7 @@ import CustomCursor from '../../components/CustomCursor';
 import Footer from '../../components/Footer';
 import Hero from '../../components/Hero';
 import Navigation from '../../components/Navigation';
+import Projects from '../../components/Projects';
 import Skills from '../../components/Skills';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,6 +18,7 @@ function Home() {
   const component = useRef(null);
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
   const cursorRef = useRef(null);
@@ -110,36 +112,6 @@ function Home() {
         immediateRender: false,
       });
 
-      // Magnetic Effect for Glass Cards
-      const cards = gsap.utils.toArray('.glass');
-      cards.forEach(card => {
-        card.addEventListener('mousemove', e => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left - rect.width / 2;
-          const y = e.clientY - rect.top - rect.height / 2;
-
-          gsap.to(card, {
-            x: x * 0.15,
-            y: y * 0.15,
-            rotateX: -y * 0.05,
-            rotateY: x * 0.05,
-            duration: 0.5,
-            ease: 'power2.out',
-          });
-        });
-
-        card.addEventListener('mouseleave', () => {
-          gsap.to(card, {
-            x: 0,
-            y: 0,
-            rotateX: 0,
-            rotateY: 0,
-            duration: 0.8,
-            ease: 'elastic.out(1, 0.3)',
-          });
-        });
-      });
-
       // Custom Cursor Logic
       const cursor = cursorRef.current;
 
@@ -187,6 +159,7 @@ function Home() {
       <Navigation />
       <Hero heroRef={heroRef} />
       <About aboutRef={aboutRef} />
+      <Projects projectsRef={projectsRef} />
       <Skills skillsRef={skillsRef} />
       <Contact contactRef={contactRef} />
       <Footer />

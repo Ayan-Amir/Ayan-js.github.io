@@ -5,8 +5,8 @@ import { HERO } from '../data/portfolioData';
 
 function Hero({ heroRef }) {
   return (
-    <main id="home" ref={heroRef} className="relative flex min-h-screen items-center pt-20">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:py-32">
+    <section id="home" ref={heroRef} className="relative flex min-h-[90vh] items-center pt-24 pb-16">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-3xl">
           <p className="hero-sub mb-6 text-xl font-bold tracking-[0.2em] text-cyan-500 uppercase">{HERO.role}</p>
           <h1 className="hero-title text-6xl font-black tracking-tight text-white md:text-8xl lg:text-9xl">
@@ -36,7 +36,7 @@ function Hero({ heroRef }) {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }
 

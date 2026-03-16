@@ -2,7 +2,7 @@ import { ABOUT } from '../data/portfolioData';
 
 function About({ aboutRef }) {
   return (
-    <section id="about" ref={aboutRef} className="relative py-32 overflow-hidden">
+    <section id="about" ref={aboutRef} className="relative py-16 overflow-hidden">
       {/* Section specific glow */}
       <div className="absolute right-0 top-1/2 -z-10 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-cyan-500/5 blur-[120px]" />
 
@@ -20,10 +20,7 @@ function About({ aboutRef }) {
 
             <div className="grid gap-4 sm:grid-cols-3">
               {ABOUT.highlights.map(item => (
-                <div
-                  key={item.label}
-                  className="glass rounded-[2rem] p-8 text-center border-white/5 transition-all duration-300 hover:border-cyan-500/30 hover:bg-slate-900/40"
-                >
+                <div key={item.label} className="glass rounded-[2rem] p-8 text-center border-white/5">
                   <p className="text-sm font-bold uppercase tracking-widest text-cyan-500/70 mb-3">{item.label}</p>
                   <p className="text-2xl font-black text-white">{item.value}</p>
                 </div>
@@ -35,13 +32,8 @@ function About({ aboutRef }) {
             <h3 className="text-2xl font-bold text-white mb-2 ml-2">What I Do</h3>
             <div className="space-y-6">
               {ABOUT.services.map(service => (
-                <div
-                  key={service.title}
-                  className="glass group rounded-3xl p-8 border-white/5 transition-all duration-300 hover:border-indigo-500/30 hover:bg-slate-900/60"
-                >
-                  <h4 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
-                    {service.title}
-                  </h4>
+                <div key={service.title} className="glass rounded-3xl p-8 border-white/5">
+                  <h4 className="text-xl font-bold text-white">{service.title}</h4>
                   <p className="mt-3 text-lg text-slate-400 leading-relaxed">{service.desc}</p>
                 </div>
               ))}

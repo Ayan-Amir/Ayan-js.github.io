@@ -116,7 +116,7 @@ export const CONTACT = {
   calendar: 'https://calendar.app.google/zXsZ6NeXUhVVdv6P9',
   resume: '/src/assets/resume/Ayyan-Amir-Resume.pdf',
   links: [
-    { name: 'GitHub', href: 'https://github.com/ayyanamir6', icon: 'github' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/ayyanamir6', icon: 'linkedin' },
+    { name: 'GitHub', href: 'https://github.com/Ayan-Amir', icon: 'github' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ayyan-amir/', icon: 'linkedin' },
   ],
 };

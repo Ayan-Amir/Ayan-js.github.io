@@ -24,7 +24,7 @@ export const NAV_LINKS = [
 export const HERO = {
   title: 'Ayyan Amir',
   role: 'Software Engineer',
-  tagline: 'Architecting Scalable AI & Frontend Solutions',
+  tagline: 'Scalable AI & Frontend Solutions',
   intro:
     'I turn complex business visions into seamless digital realities. With a focus on performance, scalability, and elite user experiences, I build high-impact applications that drive measurable growth and technological innovation.',
 };
@@ -114,7 +114,6 @@ export const CONTACT = {
   email: 'ayyanamir6@gmail.com',
   phone: '+923224497542',
   calendar: 'https://calendar.app.google/zXsZ6NeXUhVVdv6P9',
-  resume: '/src/assets/resume/Ayyan-Amir-Resume.pdf',
   links: [
     { name: 'GitHub', href: 'https://github.com/Ayan-Amir', icon: 'github' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ayyan-amir/', icon: 'linkedin' },

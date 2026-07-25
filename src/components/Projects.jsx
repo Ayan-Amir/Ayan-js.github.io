@@ -1,3 +1,5 @@
+import { ArrowUpRight } from 'lucide-react';
+
 import { PROJECTS } from '../data/portfolioData';
 
 function Projects({ projectsRef }) {
@@ -14,13 +16,20 @@ function Projects({ projectsRef }) {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map(project => (
-            <div
+            <a
               key={project.id}
-              className="project-card glass relative flex flex-col justify-between overflow-hidden rounded-[2rem] border-white/5 p-8"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card glass group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border-white/5 p-8 transition-colors hover:border-cyan-500/30"
             >
               <div className="relative z-10 mb-8 flex flex-col h-full">
-                <div className="mb-4 flex items-start justify-between">
+                <div className="mb-4 flex items-start justify-between gap-4">
                   <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                  <ArrowUpRight
+                    size={22}
+                    className="mt-1 shrink-0 text-slate-500 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-cyan-400"
+                  />
                 </div>
                 <p className="mb-4 text-sm font-medium tracking-wide text-indigo-400/80 uppercase">
                   {project.subtitle}
@@ -38,7 +47,7 @@ function Projects({ projectsRef }) {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

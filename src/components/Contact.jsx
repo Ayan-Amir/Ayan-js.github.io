@@ -22,7 +22,7 @@ function Contact({ contactRef }) {
               </p>
 
               <div className="mt-12 space-y-8">
-                <a href={`mailto:${CONTACT.email} `} className="contact-item group flex items-center gap-6">
+                <a href={`mailto:${CONTACT.email}`} className="contact-item group flex items-center gap-6">
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-500 transition-colors group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
                     <Mail size={28} />
                   </div>
@@ -35,7 +35,7 @@ function Contact({ contactRef }) {
                 </a>
 
                 <a
-                  href={`tel:${CONTACT.phone.replace(/\s/g, '')} `}
+                  href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                   className="contact-item group flex items-center gap-6"
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-500 transition-colors group-hover:bg-indigo-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]">

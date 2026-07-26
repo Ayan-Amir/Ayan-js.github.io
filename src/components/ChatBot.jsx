@@ -38,13 +38,40 @@ function ChatBot({ isOpen, onOpenChange }) {
         body: JSON.stringify({ messages: nextMessages }),
       });
 
-      const data = await response.json().catch(() => null);
-
-      if (!response.ok || !data) {
+      if (!response.ok || !response.body) {
+        const data = await response.json().catch(() => null);
         throw new Error(data?.error || 'Something went wrong.');
       }
 
-      setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let assistantText = '';
+      let hasStartedReply = false;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunkText = decoder.decode(value, { stream: true });
+        if (!chunkText) continue;
+        assistantText += chunkText;
+
+        if (!hasStartedReply) {
+          hasStartedReply = true;
+          setIsLoading(false);
+          setMessages(prev => [...prev, { role: 'assistant', content: assistantText }]);
+        } else {
+          setMessages(prev => {
+            const updated = [...prev];
+            updated[updated.length - 1] = { role: 'assistant', content: assistantText };
+            return updated;
+          });
+        }
+      }
+
+      if (!hasStartedReply) {
+        throw new Error("Sorry, I couldn't come up with a response for that.");
+      }
     } catch (err) {
       setError(err.message || 'Something went wrong. Please try again.');
     } finally {

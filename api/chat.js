@@ -44,7 +44,35 @@ LinkedIn: https://www.linkedin.com/in/ayyan-amir/`;
 const MAX_HISTORY = 20;
 const MAX_MESSAGE_LENGTH = 4000;
 
-async function callOpenRouter(apiKey, model, sanitized) {
+// Reads an SSE response body and calls onDelta(text) for each token as it arrives.
+async function pumpSSE(body, onEvent) {
+  const reader = body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+
+    const lines = buffer.split('\n');
+    buffer = lines.pop();
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith('data:')) continue;
+      const payload = trimmed.slice(5).trim();
+      if (payload === '[DONE]') continue;
+      try {
+        onEvent(JSON.parse(payload));
+      } catch {
+        // ignore malformed SSE chunk
+      }
+    }
+  }
+}
+
+async function streamOpenRouter(apiKey, model, sanitized, res) {
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -54,6 +82,7 @@ async function callOpenRouter(apiKey, model, sanitized) {
     body: JSON.stringify({
       model,
       max_tokens: 512,
+      stream: true,
       messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...sanitized],
     }),
   });
@@ -63,11 +92,22 @@ async function callOpenRouter(apiKey, model, sanitized) {
     throw new Error(`OpenRouter error ${response.status}: ${errorText}`);
   }
 
-  const data = await response.json();
-  return data.choices?.[0]?.message?.content?.trim();
+  res.status(200);
+  res.setHeader('content-type', 'text/plain; charset=utf-8');
+  res.setHeader('cache-control', 'no-cache');
+
+  let wroteAny = false;
+  await pumpSSE(response.body, event => {
+    const delta = event.choices?.[0]?.delta?.content;
+    if (delta) {
+      wroteAny = true;
+      res.write(delta);
+    }
+  });
+  return wroteAny;
 }
 
-async function callAnthropic(apiKey, model, sanitized) {
+async function streamAnthropic(apiKey, model, sanitized, res) {
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -79,6 +119,7 @@ async function callAnthropic(apiKey, model, sanitized) {
       model,
       max_tokens: 512,
       system: SYSTEM_PROMPT,
+      stream: true,
       messages: sanitized,
     }),
   });
@@ -88,8 +129,18 @@ async function callAnthropic(apiKey, model, sanitized) {
     throw new Error(`Anthropic error ${response.status}: ${errorText}`);
   }
 
-  const data = await response.json();
-  return data.content?.[0]?.text?.trim();
+  res.status(200);
+  res.setHeader('content-type', 'text/plain; charset=utf-8');
+  res.setHeader('cache-control', 'no-cache');
+
+  let wroteAny = false;
+  await pumpSSE(response.body, event => {
+    if (event.type === 'content_block_delta' && event.delta?.type === 'text_delta') {
+      wroteAny = true;
+      res.write(event.delta.text);
+    }
+  });
+  return wroteAny;
 }
 
 export default async function handler(req, res) {
@@ -124,13 +175,19 @@ export default async function handler(req, res) {
   }
 
   try {
-    const reply = openRouterKey
-      ? await callOpenRouter(openRouterKey, process.env.OPENROUTER_MODEL || 'openai/gpt-4o-mini', sanitized)
-      : await callAnthropic(anthropicKey, process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001', sanitized);
+    const wroteAny = openRouterKey
+      ? await streamOpenRouter(openRouterKey, process.env.OPENROUTER_MODEL || 'openai/gpt-4o-mini', sanitized, res)
+      : await streamAnthropic(anthropicKey, process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001', sanitized, res);
 
-    return res.status(200).json({ reply: reply || "Sorry, I couldn't come up with a response for that." });
+    if (!wroteAny && !res.writableEnded) {
+      res.write("Sorry, I couldn't come up with a response for that.");
+    }
+    return res.end();
   } catch (error) {
     console.error('Chat handler error:', error);
+    if (res.headersSent) {
+      return res.end();
+    }
     return res.status(502).json({ error: 'Failed to get a response from the assistant.' });
   }
 }

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Award } from 'lucide-react';
+import { ArrowUpRight, Award, Sparkles } from 'lucide-react';
 
 import { CERTIFICATIONS } from '../data/portfolioData';
 
@@ -15,6 +15,7 @@ function Certifications({ certificationsRef }) {
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {CERTIFICATIONS.map(cert => {
+            const isAI = cert.issuer === 'Anthropic';
             const Wrapper = cert.link ? 'a' : 'div';
             const wrapperProps = cert.link
               ? { href: cert.link, target: '_blank', rel: 'noopener noreferrer' }
@@ -23,10 +24,20 @@ function Certifications({ certificationsRef }) {
               <Wrapper
                 key={cert.id}
                 {...wrapperProps}
-                className="cert-card glass group flex items-start gap-4 rounded-2xl p-6 transition-colors hover:border-cyan-500/30"
+                className={
+                  isAI
+                    ? 'cert-card glass group flex items-start gap-4 rounded-2xl p-6 ring-1 ring-indigo-500/30 transition-colors hover:border-indigo-500/30'
+                    : 'cert-card glass group flex items-start gap-4 rounded-2xl p-6 transition-colors hover:border-cyan-500/30'
+                }
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400">
-                  <Award size={20} />
+                <div
+                  className={
+                    isAI
+                      ? 'flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-500 text-white'
+                      : 'flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400'
+                  }
+                >
+                  {isAI ? <Sparkles size={20} /> : <Award size={20} />}
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-3">

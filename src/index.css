@@ -47,6 +47,38 @@ body {
   .text-gradient {
     @apply bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent light:from-cyan-600 light:to-indigo-600;
   }
+
+  .ai-grid {
+    background-image:
+      linear-gradient(to right, rgba(6, 182, 212, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(6, 182, 212, 0.08) 1px, transparent 1px);
+    background-size: 42px 42px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, black 40%, transparent 90%);
+    mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, black 40%, transparent 90%);
+  }
+
+  .light .ai-grid {
+    background-image:
+      linear-gradient(to right, rgba(8, 145, 178, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(8, 145, 178, 0.12) 1px, transparent 1px);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.75);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
 }
 
 @keyframes float {

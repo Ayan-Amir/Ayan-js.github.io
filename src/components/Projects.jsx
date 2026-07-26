@@ -88,14 +88,23 @@ function Projects({ projectsRef }) {
                   <p className="text-sm text-slate-300 light:text-slate-600 leading-relaxed">{project.description}</p>
 
                   <div className="mt-4 flex flex-wrap gap-1.5">
-                    {project.tags.map(tag => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-300 backdrop-blur-sm light:bg-slate-100 light:text-slate-600"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    {project.tags.map(tag =>
+                      tag === 'AI' ? (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-cyan-500/30 bg-gradient-to-r from-cyan-500/15 to-indigo-500/15 px-2.5 py-1 text-[11px] font-bold text-cyan-300 backdrop-blur-sm light:text-cyan-700"
+                        >
+                          {tag}
+                        </span>
+                      ) : (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-300 backdrop-blur-sm light:bg-slate-100 light:text-slate-600"
+                        >
+                          {tag}
+                        </span>
+                      ),
+                    )}
                   </div>
                 </div>
               </Wrapper>

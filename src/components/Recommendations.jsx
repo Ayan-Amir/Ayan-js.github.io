@@ -29,18 +29,23 @@ function Recommendations({ recommendationsRef }) {
           </p>
         </div>
 
-        <div className="recommendation-card glass rounded-3xl p-8 md:p-12">
-          <Quote size={36} className="text-cyan-500/30" />
+        <div className="recommendation-card glass flex flex-col rounded-3xl p-8 md:p-12">
+          <Quote size={36} className="shrink-0 text-cyan-500/30" />
 
-          <p className="mt-6 text-xl font-bold leading-snug text-white light:text-slate-900 md:text-2xl">
+          <p className="mt-6 min-h-[360px] text-xl font-bold leading-snug text-white light:text-slate-900 sm:min-h-[220px] md:min-h-[200px] md:text-2xl">
             {current.quote}
           </p>
 
-          <p className="mt-8 text-sm text-slate-500 light:text-slate-500">
+          <p className="mt-8 min-h-[40px] text-sm text-slate-500 light:text-slate-500">
             {current.date}, {current.context}
           </p>
 
-          <div className="mt-8 flex items-center gap-3">
+          <a
+            href={current.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 flex items-center gap-3 group w-fit"
+          >
             {current.photo ? (
               <img
                 src={current.photo}
@@ -53,10 +58,12 @@ function Recommendations({ recommendationsRef }) {
               </div>
             )}
             <div>
-              <p className="text-base font-bold text-white light:text-slate-900">{current.name}</p>
-              <p className="text-sm text-slate-400 light:text-slate-600">{current.role}</p>
+              <p className="text-base font-bold text-white transition-colors group-hover:text-cyan-400 light:text-slate-900">
+                {current.name}
+              </p>
+              <p className="min-h-[40px] text-sm text-slate-400 light:text-slate-600">{current.role}</p>
             </div>
-          </div>
+          </a>
 
           <div className="mt-10 flex items-center justify-between border-t border-white/5 pt-6">
             <div className="flex items-center gap-3">

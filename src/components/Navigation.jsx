@@ -89,9 +89,8 @@ function Navigation() {
                 Resume
               </a>
             </li>
-            <li className="flex items-center gap-3 pt-2">
-              <ThemeToggle />
-              <span className="text-sm font-medium text-slate-400 light:text-slate-600">Toggle theme</span>
+            <li className="pt-2">
+              <ThemeToggle label="Toggle theme" />
             </li>
           </ul>
         </nav>

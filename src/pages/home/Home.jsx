@@ -33,7 +33,8 @@ function Home() {
       // Hero Entrance
       const heroTl = gsap.timeline({ defaults: { ease: 'power4.out' } });
       heroTl
-        .from('.hero-sub', { opacity: 0, y: 30, duration: 1 })
+        .from('.hero-badge', { opacity: 0, y: 20, duration: 0.8 })
+        .from('.hero-sub', { opacity: 0, y: 30, duration: 1 }, '-=0.5')
         .from('.hero-title', { opacity: 0, scale: 0.95, y: 50, duration: 1.2 }, '-=0.6')
         .from('.hero-role', { opacity: 0, y: 20, duration: 0.8 }, '-=0.8')
         .from('.hero-desc', { opacity: 0, y: 20, duration: 0.8 }, '-=0.6')

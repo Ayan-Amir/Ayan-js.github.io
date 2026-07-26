@@ -5,7 +5,8 @@ import { HERO } from '../data/portfolioData';
 
 function Hero({ heroRef }) {
   return (
-    <section id="home" ref={heroRef} className="relative flex min-h-[70vh] items-center pt-24 pb-16">
+    <section id="home" ref={heroRef} className="relative flex min-h-[70vh] items-center pt-24 pb-16 overflow-hidden">
+      <div className="ai-grid pointer-events-none absolute inset-0 -z-10" />
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-3xl">
           <p className="hero-sub mb-4 text-base font-bold tracking-[0.2em] text-cyan-500 uppercase">{HERO.role}</p>

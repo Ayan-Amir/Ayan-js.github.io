@@ -4,8 +4,9 @@
     {
       "name": "portfolio-dev",
       "runtimeExecutable": "yarn",
-      "runtimeArgs": ["dev", "--port", "3005", "--strictPort"],
-      "port": 3005
+      "runtimeArgs": ["dev"],
+      "port": 3005,
+      "autoPort": true
     }
   ]
 }

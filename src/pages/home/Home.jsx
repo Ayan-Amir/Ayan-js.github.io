@@ -1,10 +1,11 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import About from '../../components/About';
 import Certifications from '../../components/Certifications';
+import ChatBot from '../../components/ChatBot';
 import Contact from '../../components/Contact';
 import CustomCursor from '../../components/CustomCursor';
 import Footer from '../../components/Footer';
@@ -18,6 +19,7 @@ import Skills from '../../components/Skills';
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const component = useRef(null);
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
@@ -199,7 +201,8 @@ function Home() {
       <Recommendations recommendationsRef={recommendationsRef} />
       <Contact contactRef={contactRef} />
       <Footer />
-      <ScrollToTop />
+      <ScrollToTop hidden={isChatOpen} />
+      <ChatBot isOpen={isChatOpen} onOpenChange={setIsChatOpen} />
       <CustomCursor cursorRef={cursorRef} />
     </div>
   );

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { Menu, X } from 'lucide-react';
 
+import ThemeToggle from './ThemeToggle';
 import resumeFile from '../assets/resume/Ayyan-Amir-Resume.pdf';
 import { NAV_LINKS } from '../data/portfolioData';
 
@@ -12,9 +13,9 @@ function Navigation() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-header">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <a
-          className="text-xl font-bold tracking-tight transition-all hover:text-cyan-400"
+          className="text-lg font-bold tracking-tight transition-all hover:text-cyan-400"
           href="#home"
           onClick={closeMenu}
         >
@@ -27,7 +28,7 @@ function Navigation() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="text-lg font-medium text-slate-400 transition-colors hover:text-cyan-400"
+                  className="text-sm font-medium text-slate-400 light:text-slate-600 transition-colors hover:text-cyan-400"
                 >
                   {link.label}
                 </a>
@@ -38,7 +39,7 @@ function Navigation() {
                 href={resumeFile}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-medium text-slate-400 transition-colors hover:text-cyan-400"
+                className="text-lg font-medium text-slate-400 light:text-slate-600 transition-colors hover:text-cyan-400"
               >
                 Resume
               </a>
@@ -46,26 +47,32 @@ function Navigation() {
           </ul>
         </nav>
 
-        <button
-          type="button"
-          className="text-slate-300 transition-colors hover:text-cyan-400 md:hidden"
-          onClick={() => setIsMenuOpen(open => !open)}
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="flex items-center gap-3">
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
+
+          <button
+            type="button"
+            className="text-slate-400 transition-colors hover:text-cyan-400 md:hidden"
+            onClick={() => setIsMenuOpen(open => !open)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {isMenuOpen && (
-        <nav className="glass-header border-t border-slate-800/50 md:hidden">
+        <nav className="glass-header border-t border-slate-800/50 light:border-slate-200 md:hidden">
           <ul className="flex flex-col gap-2 px-6 py-6">
             {NAV_LINKS.map(link => (
               <li key={link.label}>
                 <a
                   href={link.href}
                   onClick={closeMenu}
-                  className="block py-2 text-lg font-medium text-slate-300 transition-colors hover:text-cyan-400"
+                  className="block py-2 text-base font-medium text-slate-300 light:text-slate-700 transition-colors hover:text-cyan-400"
                 >
                   {link.label}
                 </a>
@@ -77,10 +84,14 @@ function Navigation() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                className="block py-2 text-lg font-medium text-slate-300 transition-colors hover:text-cyan-400"
+                className="block py-2 text-lg font-medium text-slate-300 light:text-slate-700 transition-colors hover:text-cyan-400"
               >
                 Resume
               </a>
+            </li>
+            <li className="flex items-center gap-3 pt-2">
+              <ThemeToggle />
+              <span className="text-sm font-medium text-slate-400 light:text-slate-600">Toggle theme</span>
             </li>
           </ul>
         </nav>

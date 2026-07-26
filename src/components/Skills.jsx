@@ -5,25 +5,27 @@ function Skills({ skillsRef }) {
     <section id="technologies" ref={skillsRef} className="relative py-16">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl">Expertise</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-white light:text-slate-900 md:text-4xl">
+            Expertise
+          </h2>
           <div className="mt-4 h-1.5 w-20 rounded-full bg-cyan-500" />
-          <p className="mt-6 max-w-2xl text-xl text-slate-400">
+          <p className="mt-4 max-w-2xl text-base text-slate-400 light:text-slate-600">
             A comprehensive toolkit of languages, frameworks, and tools I use to bring ideas to life.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {SKILLS.map(group => (
-            <div key={group.category} className="skill-group glass rounded-3xl p-8">
-              <h3 className="mb-6 text-xl font-bold text-white flex items-center gap-3">
-                <span className="h-6 w-1 bg-cyan-500 rounded-full" />
+            <div key={group.category} className="skill-group glass rounded-2xl p-6">
+              <h3 className="mb-4 text-base font-bold text-white light:text-slate-900 flex items-center gap-3">
+                <span className="h-5 w-1 bg-cyan-500 rounded-full" />
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {group.items.map(item => (
                   <span
                     key={item}
-                    className="rounded-lg bg-slate-800/40 px-3 py-1.5 text-sm font-semibold text-slate-300 border border-slate-700/30"
+                    className="rounded-lg bg-slate-800/40 px-3 py-1.5 text-sm font-semibold text-slate-300 border border-slate-700/30 light:bg-slate-100 light:text-slate-700 light:border-slate-200"
                   >
                     {item}
                   </span>

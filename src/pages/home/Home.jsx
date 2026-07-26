@@ -4,12 +4,15 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import About from '../../components/About';
+import Certifications from '../../components/Certifications';
 import Contact from '../../components/Contact';
 import CustomCursor from '../../components/CustomCursor';
 import Footer from '../../components/Footer';
 import Hero from '../../components/Hero';
 import Navigation from '../../components/Navigation';
 import Projects from '../../components/Projects';
+import Recommendations from '../../components/Recommendations';
+import ScrollToTop from '../../components/ScrollToTop';
 import Skills from '../../components/Skills';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +23,8 @@ function Home() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
+  const certificationsRef = useRef(null);
+  const recommendationsRef = useRef(null);
   const contactRef = useRef(null);
   const cursorRef = useRef(null);
 
@@ -98,6 +103,34 @@ function Home() {
         immediateRender: false,
       });
 
+      // Certifications Animation
+      gsap.from('.cert-card', {
+        scrollTrigger: {
+          trigger: '#certifications',
+          start: 'top 85%',
+        },
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: 'power3.out',
+        immediateRender: false,
+      });
+
+      // Recommendations Animation
+      gsap.from('.recommendation-card', {
+        scrollTrigger: {
+          trigger: '#recommendations',
+          start: 'top 85%',
+        },
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: 'power3.out',
+        immediateRender: false,
+      });
+
       // Contact Animation
       gsap.from('.contact-item', {
         scrollTrigger: {
@@ -146,14 +179,14 @@ function Home() {
   }, []);
 
   return (
-    <div ref={component} className="relative min-h-screen bg-slate-950 text-slate-50 selection:bg-cyan-500/30">
+    <div className="relative min-h-screen bg-slate-950 text-slate-50 selection:bg-cyan-500/30 light:bg-slate-50 light:text-slate-900" ref={component}>
       <div className="noise" />
 
       {/* Background elements */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="bg-glow absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[120px]" />
-        <div className="bg-glow absolute -right-40 top-1/4 h-[400px] w-[400px] rounded-full bg-indigo-500/10 blur-[120px]" />
-        <div className="bg-glow absolute bottom-0 left-1/2 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-cyan-400/5 blur-[100px]" />
+        <div className="bg-glow absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[120px] light:opacity-40" />
+        <div className="bg-glow absolute -right-40 top-1/4 h-[400px] w-[400px] rounded-full bg-indigo-500/10 blur-[120px] light:opacity-40" />
+        <div className="bg-glow absolute bottom-0 left-1/2 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-cyan-400/5 blur-[100px] light:opacity-40" />
       </div>
 
       <Navigation />
@@ -161,8 +194,11 @@ function Home() {
       <About aboutRef={aboutRef} />
       <Projects projectsRef={projectsRef} />
       <Skills skillsRef={skillsRef} />
+      <Certifications certificationsRef={certificationsRef} />
+      <Recommendations recommendationsRef={recommendationsRef} />
       <Contact contactRef={contactRef} />
       <Footer />
+      <ScrollToTop />
       <CustomCursor cursorRef={cursorRef} />
     </div>
   );

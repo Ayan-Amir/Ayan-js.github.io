@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant light (&:where(.light, .light *));
+
 @theme {
   --font-sans: 'Outfit', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -11,7 +13,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  @apply bg-slate-950 text-slate-50 antialiased;
+  @apply bg-slate-950 text-slate-50 antialiased transition-colors duration-300 light:bg-slate-50 light:text-slate-900;
 }
 
 @layer utilities {
@@ -30,16 +32,20 @@ body {
     opacity: 0.05;
   }
 
+  .light .noise {
+    opacity: 0.02;
+  }
+
   .glass {
-    @apply border border-white/10 bg-white/5 backdrop-blur-md shadow-xl transition-all duration-300;
+    @apply border border-white/10 bg-white/5 backdrop-blur-md shadow-xl transition-all duration-300 light:border-slate-200 light:bg-white light:shadow-slate-200/50;
   }
 
   .glass-header {
-    @apply border-b border-white/10 bg-slate-950/80 backdrop-blur-xl;
+    @apply border-b border-white/10 bg-slate-950/80 backdrop-blur-xl light:border-slate-200 light:bg-slate-50/80;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent light:from-cyan-600 light:to-indigo-600;
   }
 }
 

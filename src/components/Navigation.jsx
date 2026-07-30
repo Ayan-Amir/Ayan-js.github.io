@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import ThemeToggle from './ThemeToggle';
-import resumeFile from '../assets/resume/Ayyan-Amir-Resume.pdf';
+import resumeFile from '../assets/resume/Ayyan_Amir_Resume_Updated_.pdf';
 import { NAV_LINKS } from '../data/portfolioData';
 
 function Navigation() {

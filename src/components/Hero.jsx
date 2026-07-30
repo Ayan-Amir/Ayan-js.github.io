@@ -1,6 +1,6 @@
 import { FileText, Mail } from 'lucide-react';
 
-import resumeFile from '../assets/resume/Ayyan-Amir-Resume.pdf';
+import resumeFile from '../assets/resume/Ayyan_Amir_Resume_Updated_.pdf';
 import { HERO } from '../data/portfolioData';
 
 function Hero({ heroRef }) {

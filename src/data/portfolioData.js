@@ -146,7 +146,7 @@ export const PROJECTS = [
     description:
       'Property search, filtering, and dynamic listing pages for a fast, GSAP-animated real estate platform.',
     tags: ['GSAP', 'Responsive'],
-    link: 'https://alesayi.com/en/home-page/',
+    link: 'https://aqaratmarketing.com/',
     icon: 'Home',
     accent: 'from-amber-500 to-orange-600',
     iconTint: 'text-amber-400',
@@ -238,7 +238,7 @@ export const RECOMMENDATIONS = [
     photo: zainabPhoto,
     linkedin: 'https://www.linkedin.com/in/zainab-fatima-84489820a/',
     quote:
-      'He\'s a skilled frontend developer with a strong grasp of React and a great eye for detail. He\'s always eager to learn and consistently takes the time to explain frontend concepts clearly. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.',
+      "He's a skilled frontend developer with a strong grasp of React and a great eye for detail. He's always eager to learn and consistently takes the time to explain frontend concepts clearly. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.",
   },
   {
     id: 'hammad-ali',
@@ -260,7 +260,7 @@ export const RECOMMENDATIONS = [
     photo: usmanPhoto,
     linkedin: 'https://www.linkedin.com/in/usman-tariq-sqae/',
     quote:
-      'Ayyan has consistently impressed me with his mastery in React, Redux, and UI development. What truly sets Ayyan apart is his calm attitude — soft-spoken, easy to work with, and incredibly dependable. I can\'t recommend Ayyan highly enough.',
+      "Ayyan has consistently impressed me with his mastery in React, Redux, and UI development. What truly sets Ayyan apart is his calm attitude — soft-spoken, easy to work with, and incredibly dependable. I can't recommend Ayyan highly enough.",
   },
   {
     id: 'obaidullah-ishfaq',
@@ -292,19 +292,19 @@ export const RECOMMENDATIONS = [
     photo: adeenPhoto,
     linkedin: 'https://www.linkedin.com/in/adeen-khan-0331101b2/',
     quote:
-      'He is one of the most exceptional frontend engineers I\'ve collaborated with. His technical expertise is matched by his strong sense of product ownership. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!',
+      "He is one of the most exceptional frontend engineers I've collaborated with. His technical expertise is matched by his strong sense of product ownership. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!",
   },
 
   {
     id: 'saqlain-rasheed',
     name: 'Saqlain Rasheed',
-    role: 'Software Engineer — Ayyan\'s mentor',
+    role: "Software Engineer — Ayyan's mentor",
     date: 'June 26, 2025',
-    context: 'Saqlain was Ayyan\'s mentor',
+    context: "Saqlain was Ayyan's mentor",
     photo: saqlainPhoto,
     linkedin: 'https://www.linkedin.com/in/saqlainrasheed/',
     quote:
-      'He\'s not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable.',
+      "He's not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable.",
   },
   {
     id: 'laiba-athar',

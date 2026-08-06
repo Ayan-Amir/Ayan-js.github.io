@@ -10,7 +10,7 @@ function Certifications({ certificationsRef }) {
           <h2 className="text-3xl font-bold tracking-tight text-white light:text-slate-900 md:text-4xl">
             Certifications
           </h2>
-          <div className="mt-4 h-1.5 w-20 rounded-full bg-cyan-500" />
+          <div className="section-divider mt-4 h-1.5 w-20 rounded-full bg-cyan-500" />
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -33,8 +33,8 @@ function Certifications({ certificationsRef }) {
                 <div
                   className={
                     isAI
-                      ? 'flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-500 text-white'
-                      : 'flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400'
+                      ? 'cert-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-500 text-white'
+                      : 'cert-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400'
                   }
                 >
                   {isAI ? <Sparkles size={20} /> : <Award size={20} />}

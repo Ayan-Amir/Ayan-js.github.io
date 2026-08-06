@@ -50,7 +50,7 @@ function Projects({ projectsRef }) {
           <h2 className="text-3xl font-extrabold tracking-tight text-white light:text-slate-900 md:text-4xl">
             Featured Projects
           </h2>
-          <div className="mt-4 h-1.5 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500" />
+          <div className="section-divider mt-4 h-1.5 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500" />
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -92,14 +92,14 @@ function Projects({ projectsRef }) {
                       tag === 'AI' ? (
                         <span
                           key={tag}
-                          className="rounded-full border border-cyan-500/30 bg-gradient-to-r from-cyan-500/15 to-indigo-500/15 px-2.5 py-1 text-[11px] font-bold text-cyan-300 backdrop-blur-sm light:text-cyan-700"
+                          className="project-tag rounded-full border border-cyan-500/30 bg-gradient-to-r from-cyan-500/15 to-indigo-500/15 px-2.5 py-1 text-[11px] font-bold text-cyan-300 backdrop-blur-sm light:text-cyan-700"
                         >
                           {tag}
                         </span>
                       ) : (
                         <span
                           key={tag}
-                          className="rounded-full bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-300 backdrop-blur-sm light:bg-slate-100 light:text-slate-600"
+                          className="project-tag rounded-full bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-300 backdrop-blur-sm light:bg-slate-100 light:text-slate-600"
                         >
                           {tag}
                         </span>

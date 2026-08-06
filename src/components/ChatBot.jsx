@@ -4,7 +4,7 @@ import { Bot, Send, X } from 'lucide-react';
 
 const GREETING = {
   role: 'assistant',
-  content: "Hi! I'm Ayyan's AI assistant. Ask me about his experience, projects, skills, or how to get in touch.",
+  content: 'Hi! I\'m Ayyan\'s AI assistant. Ask me about his experience, projects, skills, or how to get in touch.',
 };
 
 function ChatBot({ isOpen, onOpenChange }) {
@@ -70,7 +70,7 @@ function ChatBot({ isOpen, onOpenChange }) {
       }
 
       if (!hasStartedReply) {
-        throw new Error("Sorry, I couldn't come up with a response for that.");
+        throw new Error('Sorry, I couldn\'t come up with a response for that.');
       }
     } catch (err) {
       setError(err.message || 'Something went wrong. Please try again.');

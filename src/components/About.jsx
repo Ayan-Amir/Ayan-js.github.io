@@ -11,7 +11,7 @@ function About({ aboutRef }) {
           <h2 className="text-3xl font-extrabold tracking-tight text-white light:text-slate-900 md:text-4xl">
             About Me
           </h2>
-          <div className="mt-4 h-1.5 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500" />
+          <div className="section-divider mt-4 h-1.5 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500" />
         </div>
 
         <div id="about-content" className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -37,7 +37,7 @@ function About({ aboutRef }) {
 
             <div className="grid gap-4 sm:grid-cols-3">
               {ABOUT.highlights.map(item => (
-                <div key={item.label} className="glass rounded-2xl p-5 text-center border-white/5">
+                <div key={item.label} className="about-highlight glass rounded-2xl p-5 text-center border-white/5">
                   <p className="text-xs font-bold uppercase tracking-widest text-cyan-500/70 mb-2">{item.label}</p>
                   <p className="text-lg font-black text-white light:text-slate-900">{item.value}</p>
                 </div>
@@ -49,7 +49,7 @@ function About({ aboutRef }) {
             <h3 className="text-lg font-bold text-white light:text-slate-900 mb-2 ml-2">What I Do</h3>
             <div className="space-y-4">
               {ABOUT.services.map(service => (
-                <div key={service.title} className="glass rounded-2xl p-6 border-white/5">
+                <div key={service.title} className="about-service glass rounded-2xl p-6 border-white/5">
                   <h4 className="text-base font-bold text-white light:text-slate-900">{service.title}</h4>
                   <p className="mt-2 text-sm text-slate-400 light:text-slate-600 leading-relaxed">{service.desc}</p>
                 </div>

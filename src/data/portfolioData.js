@@ -39,29 +39,29 @@ export const NAV_LINKS = [
 
 export const HERO = {
   title: 'Ayyan Amir',
-  role: 'Full Stack Engineer',
-  tagline: 'Scalable AI & Full-Stack Solutions',
+  role: 'AI Specialist & Full-Stack Engineer',
+  tagline: 'Production-Grade AI & Agentic Systems',
   intro:
-    'I turn complex business visions into seamless digital realities. With a focus on performance, scalability, and elite user experiences, I build high-impact applications that drive measurable growth and technological innovation.',
+    'I design and ship AI-powered products, from LLM agents and RAG pipelines to the full-stack platforms that put them in front of real users. With a focus on performance, scalability, and elite user experiences, I build high-impact applications that drive measurable growth and technological innovation.',
 };
 
 export const ABOUT = {
   photo: profilePicture,
   description:
-    'With over 5 years of hands-on experience, I architect full-stack solutions that bridge complex backend logic and intuitive frontend design. My journey has taken me from delivering interfaces for global brands like Zain Group at LogicsDrive to leading frontend teams at Cogent Labs, where I build AI-powered platforms and mentor developers. I back my work with comprehensive unit and integration tests, and I am driven by the challenge of transforming complex requirements into clean, performant, and user-centric digital products.',
+    'With over 5 years of hands-on experience, I specialize in building AI-powered products, including LLM integrations, RAG pipelines, and agentic workflows, backed by full-stack engineering that bridges complex backend logic and intuitive frontend design. My journey has taken me from delivering interfaces for global brands like Zain Group at LogicsDrive to leading frontend teams at Cogent Labs, where I build AI-powered platforms and mentor developers. I back my work with comprehensive unit and integration tests, and I am driven by the challenge of transforming complex requirements into clean, performant, and user-centric digital products.',
   highlights: [
     { label: 'Experience', value: '5+ Years' },
     { label: 'Location', value: 'Lahore, PK' },
-    { label: 'Focus', value: 'AI & Full-Stack' },
+    { label: 'Focus', value: 'AI & Agentic Systems' },
   ],
   services: [
     {
-      title: 'Frontend Architecture',
-      desc: 'Crafting scalable, maintainable React systems with modern state management.',
+      title: 'AI & Agentic Systems',
+      desc: 'Building LLM-powered products: prompt engineering, RAG pipelines, and autonomous AI agents that ship in production.',
     },
     {
-      title: 'AI Integration',
-      desc: 'Building LLM-powered features — prompt engineering, RAG, and Gen AI agents that ship in production.',
+      title: 'Frontend Architecture',
+      desc: 'Crafting scalable, maintainable React systems with modern state management.',
     },
     {
       title: 'Backend & APIs',
@@ -238,7 +238,7 @@ export const RECOMMENDATIONS = [
     photo: zainabPhoto,
     linkedin: 'https://www.linkedin.com/in/zainab-fatima-84489820a/',
     quote:
-      "He's a skilled frontend developer with a strong grasp of React and a great eye for detail. He's always eager to learn and consistently takes the time to explain frontend concepts clearly. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.",
+      'He\'s a skilled frontend developer with a strong grasp of React and a great eye for detail. He\'s always eager to learn and consistently takes the time to explain frontend concepts clearly. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.',
   },
   {
     id: 'hammad-ali',
@@ -260,7 +260,7 @@ export const RECOMMENDATIONS = [
     photo: usmanPhoto,
     linkedin: 'https://www.linkedin.com/in/usman-tariq-sqae/',
     quote:
-      "Ayyan has consistently impressed me with his mastery in React, Redux, and UI development. What truly sets Ayyan apart is his calm attitude — soft-spoken, easy to work with, and incredibly dependable. I can't recommend Ayyan highly enough.",
+      'Ayyan has consistently impressed me with his mastery in React, Redux, and UI development. What truly sets Ayyan apart is his calm attitude — soft-spoken, easy to work with, and incredibly dependable. I can\'t recommend Ayyan highly enough.',
   },
   {
     id: 'obaidullah-ishfaq',
@@ -292,19 +292,19 @@ export const RECOMMENDATIONS = [
     photo: adeenPhoto,
     linkedin: 'https://www.linkedin.com/in/adeen-khan-0331101b2/',
     quote:
-      "He is one of the most exceptional frontend engineers I've collaborated with. His technical expertise is matched by his strong sense of product ownership. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!",
+      'He is one of the most exceptional frontend engineers I\'ve collaborated with. His technical expertise is matched by his strong sense of product ownership. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!',
   },
 
   {
     id: 'saqlain-rasheed',
     name: 'Saqlain Rasheed',
-    role: "Software Engineer — Ayyan's mentor",
+    role: 'Software Engineer — Ayyan\'s mentor',
     date: 'June 26, 2025',
-    context: "Saqlain was Ayyan's mentor",
+    context: 'Saqlain was Ayyan\'s mentor',
     photo: saqlainPhoto,
     linkedin: 'https://www.linkedin.com/in/saqlainrasheed/',
     quote:
-      "He's not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable.",
+      'He\'s not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable.',
   },
   {
     id: 'laiba-athar',

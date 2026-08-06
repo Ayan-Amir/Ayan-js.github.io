@@ -10,7 +10,7 @@ function Skills({ skillsRef }) {
           <h2 className="text-3xl font-bold tracking-tight text-white light:text-slate-900 md:text-4xl">
             Expertise
           </h2>
-          <div className="mt-4 h-1.5 w-20 rounded-full bg-cyan-500" />
+          <div className="section-divider mt-4 h-1.5 w-20 rounded-full bg-cyan-500" />
           <p className="mt-4 max-w-2xl text-base text-slate-400 light:text-slate-600">
             A comprehensive toolkit of languages, frameworks, and tools I use to bring ideas to life.
           </p>
@@ -46,14 +46,14 @@ function Skills({ skillsRef }) {
                     isAI ? (
                       <span
                         key={item}
-                        className="rounded-lg border border-cyan-500/20 bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 px-3 py-1.5 text-sm font-semibold text-cyan-300 light:text-cyan-700"
+                        className="skill-chip rounded-lg border border-cyan-500/20 bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 px-3 py-1.5 text-sm font-semibold text-cyan-300 light:text-cyan-700"
                       >
                         {item}
                       </span>
                     ) : (
                       <span
                         key={item}
-                        className="rounded-lg border border-slate-700/30 bg-slate-800/40 px-3 py-1.5 text-sm font-semibold text-slate-300 light:border-slate-200 light:bg-slate-100 light:text-slate-700"
+                        className="skill-chip rounded-lg border border-slate-700/30 bg-slate-800/40 px-3 py-1.5 text-sm font-semibold text-slate-300 light:border-slate-200 light:bg-slate-100 light:text-slate-700"
                       >
                         {item}
                       </span>

@@ -18,6 +18,8 @@ import Skills from '../../components/Skills';
 
 gsap.registerPlugin(ScrollTrigger);
 
+ScrollTrigger.defaults({ toggleActions: 'play reverse play reverse' });
+
 function Home() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const component = useRef(null);
@@ -41,6 +43,15 @@ function Home() {
         .from('.hero-role', { opacity: 0, y: 20, duration: 0.8 }, '-=0.8')
         .from('.hero-desc', { opacity: 0, y: 20, duration: 0.8 }, '-=0.6')
         .from('.hero-cta', { opacity: 0, scale: 0.8, duration: 0.8, ease: 'back.out(1.7)' }, '-=0.4');
+
+      // Navigation Entrance
+      gsap.from('.nav-bar', {
+        opacity: 0,
+        y: -30,
+        duration: 0.8,
+        delay: 0.2,
+        ease: 'power3.out',
+      });
 
       // Floating CTA Animation
       gsap.to('.hero-cta-button', {
@@ -79,6 +90,20 @@ function Home() {
         });
       });
 
+      // Section Divider Bar Reveals
+      gsap.utils.toArray('.section-divider').forEach(divider => {
+        gsap.from(divider, {
+          scrollTrigger: {
+            trigger: divider,
+            start: 'top 90%',
+          },
+          scaleX: 0,
+          duration: 0.8,
+          delay: 0.3,
+          ease: 'power3.inOut',
+        });
+      });
+
       // About Animation
       gsap.from('#about-content', {
         scrollTrigger: {
@@ -90,6 +115,66 @@ function Home() {
         duration: 1,
         ease: 'power3.out',
         immediateRender: false,
+      });
+
+      // About Highlight Cards
+      gsap.from('.about-highlight', {
+        scrollTrigger: {
+          trigger: '#about',
+          start: 'top 75%',
+        },
+        opacity: 0,
+        y: 20,
+        scale: 0.85,
+        stagger: 0.12,
+        duration: 0.6,
+        ease: 'back.out(1.7)',
+        immediateRender: false,
+      });
+
+      // About Service Cards
+      gsap.from('.about-service', {
+        scrollTrigger: {
+          trigger: '#about',
+          start: 'top 70%',
+        },
+        opacity: 0,
+        x: 30,
+        stagger: 0.1,
+        duration: 0.7,
+        ease: 'power3.out',
+        immediateRender: false,
+      });
+
+      // Project Cards Animation — staggered rise with soft focus pull
+      gsap.utils.toArray('.project-card').forEach((card, i) => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 88%',
+          },
+        });
+
+        tl.from(card, {
+          opacity: 0,
+          y: 70,
+          scale: 0.92,
+          filter: 'blur(6px)',
+          duration: 0.9,
+          delay: (i % 2) * 0.15,
+          ease: 'power3.out',
+          immediateRender: false,
+        }).from(
+          card.querySelectorAll('.project-tag'),
+          {
+            opacity: 0,
+            y: 10,
+            stagger: 0.05,
+            duration: 0.4,
+            ease: 'power2.out',
+          },
+          '-=0.35',
+        );
       });
 
       // Skills Animation
@@ -106,6 +191,21 @@ function Home() {
         immediateRender: false,
       });
 
+      // Skill Chip Pop-in
+      gsap.from('.skill-chip', {
+        scrollTrigger: {
+          trigger: '#technologies',
+          start: 'top 75%',
+        },
+        opacity: 0,
+        scale: 0.5,
+        y: 10,
+        stagger: 0.02,
+        duration: 0.5,
+        ease: 'back.out(2)',
+        immediateRender: false,
+      });
+
       // Certifications Animation
       gsap.from('.cert-card', {
         scrollTrigger: {
@@ -117,6 +217,21 @@ function Home() {
         stagger: 0.1,
         duration: 0.8,
         ease: 'power3.out',
+        immediateRender: false,
+      });
+
+      // Certification Icon Bounce
+      gsap.from('.cert-icon', {
+        scrollTrigger: {
+          trigger: '#certifications',
+          start: 'top 80%',
+        },
+        scale: 0,
+        rotate: -90,
+        stagger: 0.1,
+        duration: 0.6,
+        delay: 0.15,
+        ease: 'back.out(2.5)',
         immediateRender: false,
       });
 

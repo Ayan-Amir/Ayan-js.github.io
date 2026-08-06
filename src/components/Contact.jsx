@@ -21,8 +21,8 @@ function Contact({ contactRef }) {
                 vision. Reach out through any of these channels.
               </p>
 
-              <div className="mt-8 space-y-6">
-                <a href={`mailto:${CONTACT.email}`} className="contact-item group flex items-center gap-5">
+              <div className="mt-8 space-y-6 inline-flex flex-col gap-6">
+                <a href={`mailto:${CONTACT.email}`} className="contact-item group inline-flex items-center gap-5">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500 transition-colors group-hover:bg-cyan-500 group-hover:text-slate-950 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
                     <Mail size={22} />
                   </div>
@@ -36,7 +36,7 @@ function Contact({ contactRef }) {
 
                 <a
                   href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
-                  className="contact-item group flex items-center gap-5"
+                  className="contact-item group inline-flex items-center gap-5"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-500 transition-colors group-hover:bg-indigo-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]">
                     <Phone size={22} />

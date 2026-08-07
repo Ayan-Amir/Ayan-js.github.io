@@ -18,7 +18,7 @@ import Skills from '../../components/Skills';
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.defaults({ toggleActions: 'play reverse play reverse' });
+ScrollTrigger.defaults({ toggleActions: 'play none none none' });
 
 function Home() {
   const [isChatOpen, setIsChatOpen] = useState(false);

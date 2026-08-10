@@ -39,7 +39,7 @@ export const NAV_LINKS = [
 
 export const HERO = {
   title: 'Ayyan Amir',
-  role: 'AI Specialist & Full-Stack Engineer',
+  role: 'Full-Stack AI Engineer',
   tagline: 'Production-Grade AI & Agentic Systems',
   intro:
     'I design and ship AI-powered products, from LLM agents and RAG pipelines to the full-stack platforms that put them in front of real users. With a focus on performance, scalability, and elite user experiences, I build high-impact applications that drive measurable growth and technological innovation.',

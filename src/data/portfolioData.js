@@ -4,6 +4,7 @@ import blabbleCover from '../assets/images/blabble.png';
 import boosstedCover from '../assets/images/booosted.png';
 import hammadPhoto from '../assets/images/hammad.jpeg';
 import meerPhoto from '../assets/images/meer.jpeg';
+import obaidPhoto from '../assets/images/obaid.jpeg';
 import profilePicture from '../assets/images/profile-picture.png';
 import saqlainPhoto from '../assets/images/saqlain.jpeg';
 import usmanPhoto from '../assets/images/usman.jpeg';
@@ -268,6 +269,7 @@ export const RECOMMENDATIONS = [
     role: 'Software Engineer @ Freewill',
     date: 'July 14, 2025',
     context: 'Obaidullah worked with Ayyan on the same team',
+    photo: obaidPhoto,
     linkedin: 'https://www.linkedin.com/in/meharobaidullah/',
     quote:
       'Ayyan was dependable and quick to understand the UI challenges we faced. He communicated clearly, stayed aligned with team priorities, and brought a thoughtful perspective to every discussion. I’d recommend Ayyan to any team looking for a frontend engineer who brings reliability, clarity, and care to the job.',

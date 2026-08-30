@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__browser_batch",
+      "mcp__claude-in-chrome__get_page_text",
+      "Bash(yarn lint *)",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__read_page",
+      "mcp__claude-in-chrome__computer"
+    ]
+  }
+}

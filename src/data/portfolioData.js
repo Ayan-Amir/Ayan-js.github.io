@@ -96,7 +96,7 @@ export const PROJECTS = [
     description:
       'Led a team of three building a drag-and-drop analytics dashboard with ApexCharts and Gen AI-written summaries.',
     tags: ['React', 'Stripe', 'Charts', 'AI'],
-    link: 'https://cogentlabs.co/',
+    link: 'https://zendash.com/',
     icon: 'BarChart3',
     accent: 'from-indigo-500 to-purple-600',
     iconTint: 'text-purple-400',
@@ -122,7 +122,7 @@ export const PROJECTS = [
     description:
       'Real-time UK mortgage lead management as an offline-capable PWA with MUI theming and secure Stripe billing.',
     tags: ['React', 'PWA', 'Stripe', 'Redux-Saga', 'MUI'],
-    link: 'https://cogentlabs.co/',
+    link: 'https://blabble.co.uk/',
     icon: 'Building2',
     accent: 'from-slate-500 to-indigo-600',
     iconTint: 'text-indigo-400',
@@ -239,7 +239,7 @@ export const RECOMMENDATIONS = [
     photo: zainabPhoto,
     linkedin: 'https://www.linkedin.com/in/zainab-fatima-84489820a/',
     quote:
-      'He\'s a skilled frontend developer with a strong grasp of React and a great eye for detail. He\'s always eager to learn and consistently takes the time to explain frontend concepts clearly. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.',
+      "He's a skilled frontend developer with a strong grasp of React and a great eye for detail. He's always eager to learn and consistently takes the time to explain frontend concepts clearly. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.",
   },
   {
     id: 'hammad-ali',
@@ -261,7 +261,7 @@ export const RECOMMENDATIONS = [
     photo: usmanPhoto,
     linkedin: 'https://www.linkedin.com/in/usman-tariq-sqae/',
     quote:
-      'Ayyan has consistently impressed me with his mastery in React, Redux, and UI development. What truly sets Ayyan apart is his calm attitude — soft-spoken, easy to work with, and incredibly dependable. I can\'t recommend Ayyan highly enough.',
+      "Ayyan has consistently impressed me with his mastery in React, Redux, and UI development. What truly sets Ayyan apart is his calm attitude — soft-spoken, easy to work with, and incredibly dependable. I can't recommend Ayyan highly enough.",
   },
   {
     id: 'obaidullah-ishfaq',
@@ -294,19 +294,19 @@ export const RECOMMENDATIONS = [
     photo: adeenPhoto,
     linkedin: 'https://www.linkedin.com/in/adeen-khan-0331101b2/',
     quote:
-      'He is one of the most exceptional frontend engineers I\'ve collaborated with. His technical expertise is matched by his strong sense of product ownership. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!',
+      "He is one of the most exceptional frontend engineers I've collaborated with. His technical expertise is matched by his strong sense of product ownership. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!",
   },
 
   {
     id: 'saqlain-rasheed',
     name: 'Saqlain Rasheed',
-    role: 'Software Engineer — Ayyan\'s mentor',
+    role: "Software Engineer — Ayyan's mentor",
     date: 'June 26, 2025',
-    context: 'Saqlain was Ayyan\'s mentor',
+    context: "Saqlain was Ayyan's mentor",
     photo: saqlainPhoto,
     linkedin: 'https://www.linkedin.com/in/saqlainrasheed/',
     quote:
-      'He\'s not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable.',
+      "He's not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable.",
   },
   {
     id: 'laiba-athar',

@@ -239,29 +239,29 @@ export const RECOMMENDATIONS = [
     photo: zainabPhoto,
     linkedin: 'https://www.linkedin.com/in/zainab-fatima-84489820a/',
     quote:
-      "He's a skilled frontend developer with a strong grasp of React and a great eye for detail. He's always eager to learn and consistently takes the time to explain frontend concepts clearly. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.",
+      'He’s a skilled frontend developer with a strong grasp of React and a great eye for detail. He never gets too comfortable with what he already knows — if he’s good at one thing, he challenges himself to master something new. His patience, collaborative mindset, and willingness to support the team make him a great person to work with.',
   },
   {
     id: 'hammad-ali',
     name: 'Hammad Ali',
-    role: 'CEO @ Barq Dev',
+    role: 'CEO @ Barq Dev | Agentic AI Leader',
     date: 'June 26, 2025',
     context: 'Hammad worked with Ayyan on the same team',
     photo: hammadPhoto,
     linkedin: 'https://www.linkedin.com/in/hammaad-ali/',
     quote:
-      'I found him to be hard working and having a sharp eye for frontend UI and functionality related aspects. For any full-stack or frontend project, Ayyan is a wonderful member to have on the team.',
+      'I have found him to be hard working and having a sharp eye for Frontend UI and functionality related aspects. For any full-stack or frontend project, Ayyan is a wonderful member to have in team. I endorse his frontend skills!',
   },
   {
     id: 'usman-tariq',
     name: 'Usman Tariq',
-    role: 'SQA — managed Ayyan directly',
+    role: 'SQA | Automation | API Testing | Performance Testing',
     date: 'July 9, 2025',
     context: 'Usman managed Ayyan directly',
     photo: usmanPhoto,
     linkedin: 'https://www.linkedin.com/in/usman-tariq-sqae/',
     quote:
-      "Ayyan has consistently impressed me with his mastery in React, Redux, and UI development. What truly sets Ayyan apart is his calm attitude — soft-spoken, easy to work with, and incredibly dependable. I can't recommend Ayyan highly enough.",
+      'Ayyan has consistently impressed me with his mastery in React, Redux, and UI development — translating complex requirements into clean, intuitive, high-performing interfaces. What truly sets him apart is his calm attitude: soft-spoken, easy to work with, and incredibly dependable. I can’t recommend Ayyan highly enough.',
   },
   {
     id: 'obaidullah-ishfaq',
@@ -272,7 +272,7 @@ export const RECOMMENDATIONS = [
     photo: obaidPhoto,
     linkedin: 'https://www.linkedin.com/in/meharobaidullah/',
     quote:
-      'Ayyan was dependable and quick to understand the UI challenges we faced. He communicated clearly, stayed aligned with team priorities, and brought a thoughtful perspective to every discussion. I’d recommend Ayyan to any team looking for a frontend engineer who brings reliability, clarity, and care to the job.',
+      'Ayyan was dependable and quick to understand the UI challenges we faced, always aligning well with product requirements and timelines. His attention to both user experience and technical detail made a noticeable difference in our work. I’d recommend Ayyan to any team looking for a frontend engineer who brings reliability, clarity, and care to the job.',
   },
   {
     id: 'meer-hamza',
@@ -283,7 +283,7 @@ export const RECOMMENDATIONS = [
     photo: meerPhoto,
     linkedin: 'https://www.linkedin.com/in/meerhamzadev/',
     quote:
-      'Ayyan led the entire frontend development effort independently, and both times, he exceeded expectations. He brings a rare combination of technical sharpness, design sensibility, and deep product thinking that makes him an invaluable asset to any team.',
+      'Ayyan led the entire frontend development effort independently on two projects, and both times he exceeded expectations. He doesn’t just write clean, efficient code; he builds interfaces that are thoughtful, intuitive, and aligned with product goals — a rare combination of technical sharpness, design sensibility, and deep product thinking.',
   },
   {
     id: 'adeen-khan',
@@ -294,19 +294,19 @@ export const RECOMMENDATIONS = [
     photo: adeenPhoto,
     linkedin: 'https://www.linkedin.com/in/adeen-khan-0331101b2/',
     quote:
-      "He is one of the most exceptional frontend engineers I've collaborated with. His technical expertise is matched by his strong sense of product ownership. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!",
+      'He is one of the most exceptional frontend engineers I’ve collaborated with. His technical expertise is matched by his strong sense of product ownership — he not only builds clean, scalable interfaces but deeply understands product goals. Any team would be lucky to have someone as talented, dedicated, and upbeat as Ayyan!',
   },
 
   {
     id: 'saqlain-rasheed',
     name: 'Saqlain Rasheed',
-    role: "Software Engineer — Ayyan's mentor",
+    role: 'Software Engineer — Ayyan’s mentor',
     date: 'June 26, 2025',
-    context: "Saqlain was Ayyan's mentor",
+    context: 'Saqlain was Ayyan’s mentor',
     photo: saqlainPhoto,
     linkedin: 'https://www.linkedin.com/in/saqlainrasheed/',
     quote:
-      "He's not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable.",
+      'He’s not only skilled and reliable but also brings a contagious energy to the team. His can-do attitude, willingness to take on challenges, and positive presence make collaboration smooth and enjoyable. A true team player who gets things done and keeps the vibe upbeat!',
   },
   {
     id: 'laiba-athar',
